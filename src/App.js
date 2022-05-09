@@ -1,25 +1,32 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { ContextProvider } from './context/Context'
+import Header from './components/Header'
+import Tabs from './components/Tabs'
+import Card from './components/Card'
+import './App.css'
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<ContextProvider>
+			<Router>
+				<Routes>
+					<Route
+						path="/"
+						element={
+							<div className="app">
+								<div className="container">
+									<Header />
+									<main className="main">
+										<Tabs />
+										<Card />
+									</main>
+								</div>
+							</div>
+						}
+					/>
+				</Routes>
+			</Router>
+		</ContextProvider>
+	)
 }
 
-export default App;
+export default App

@@ -1,0 +1,60 @@
+.card {
+	max-width: 800px;
+}
+
+.card-content {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+}
+
+.job-info {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	align-items: flex-start;
+}
+
+.title {
+	font-weight: lighter;
+	font-size: 28px;
+	letter-spacing: 1px;
+}
+
+.company {
+	text-transform: uppercase;
+	font-weight: bold;
+	letter-spacing: 2px;
+	background: #dae2ec;
+	color: #617d98;
+	padding: 5px;
+	text-align: center;
+	display: inline-block;
+}
+
+.dates {
+	color: #617d98;
+	letter-spacing: 2px;
+	font-size: 0.9rem;
+}
+
+.duties {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	margin-top: 10px;
+}
+
+.duty {
+	display: flex;
+	gap: 30px;
+	align-items: center;
+	line-height: 1.5;
+	color: #324d67;
+}
+
+.icon {
+	flex-shrink: 0;
+	font-size: 1rem;
+	color: var(--primary);
+}
