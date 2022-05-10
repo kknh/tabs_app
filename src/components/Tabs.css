@@ -21,6 +21,20 @@
 	line-height: 1.5;
 	margin: 10px 0 0 50px;
 	transition: all linear 300ms;
+	position: relative;
+}
+
+.tab-text::before {
+	content: '';
+	position: absolute;
+	height: 2px;
+	width: 100%;
+	background-color: var(--primary);
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	opacity: 0;
+	transition: all linear 500ms;
 }
 
 .vertical-line {
@@ -49,6 +63,28 @@
 	.tabs {
 		flex-direction: row;
 		justify-content: center;
+		justify-items: center;
 		align-items: center;
+	}
+
+	.tab-text {
+		font-size: 22px;
+		margin-left: 10px;
+	}
+
+	.tab-text:hover::before {
+		opacity: 1;
+	}
+
+	.tab.active .tab-text::before {
+		opacity: 1;
+	}
+
+	.tab:hover .vertical-line {
+		opacity: 0;
+	}
+
+	.tab.active .vertical-line {
+		opacity: 0;
 	}
 }
